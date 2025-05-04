@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MetaDigiLab – Convertisseur Audiovisuel</title>
+  <style>
+    /* Charte graphique MetaDigiLab */
+    :root {
+      --bg-color: #052f3f;
+      --text-color: #e0d8c0;
+      --accent-color: #008080;
+      --btn-hover: #005050;
+      --font-sans: 'Helvetica Neue', Arial, sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header img { max-width: 200px; }
+    header h1 {
+      margin-top: 1rem;
+      font-size: 2.5rem;
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 2px solid var(--accent-color);
+      display: inline-block;
+      padding-bottom: 0.2rem;
+    }
+    ul.features {
+      list-style: none;
+      margin-top: 1rem;
+    }
+    ul.features li {
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    ul.features li:before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: var(--accent-color);
+    }
+    .btn-download {
+      display: inline-block;
+      background: var(--accent-color);
+      color: #fff;
+      text-decoration: none;
+      padding: 0.8rem 1.2rem;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background 0.3s;
+      margin-top: 1rem;
+    }
+    .btn-download:hover {
+      background: var(--btn-hover);
+    }
+    .btn-paypal {
+      display: inline-block;
+      background: #ffc439;
+      color: #000;
+      text-decoration: none;
+      padding: 0.8rem 1.2rem;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background 0.3s;
+      margin-top: 1rem;
+    }
+    .btn-paypal:hover {
+      background: #e0a800;
+    }
+    .wallet {
+      background: rgba(0, 128, 128, 0.1);
+      padding: 1rem;
+      border-radius: 4px;
+      font-family: monospace;
+      word-break: break-all;
+    }
+    .donation-qr,
+    .donation-paypal {
+      margin-top: 1rem;
+      text-align: center;
+    }
+    .donation-qr {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      align-items: center;
+    }
+    .donation-qr div {
+      text-align: center;
+    }
+    .donation-qr img {
+      max-width: 200px;
+      height: auto;
+      border: 2px solid var(--accent-color);
+      border-radius: 8px;
+    }
+    .donation-paypal p {
+      margin-bottom: 0.5rem;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      margin: 3rem 0;
+      opacity: 0.8;
+    }
+  </style>
+  <script 
+    src="https://www.paypal.com/sdk/js?client-id=BAA1apl2cDsq6ig0oM1jJNeF12is858k7tZhfBlhr0ftEebjnKgSq9gs2BTiTUj5i1JKdbzbX25qCEXLSY&components=hosted-buttons&disable-funding=venmo&currency=EUR">
+  </script>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo MetaDigiLab">
+    <h1>MetaDigiLab</h1>
+    <p>Votre odyssée audiovisuelle en trois actes 🎬🔗🏆</p>
+  </header>
+  <main>
+    <section id="presentation">
+      <h2>Présentation</h2>
+      <p>
+        Bienvenue dans l'antre de MetaDigiLab, le « tel quel » convertisseur ISO→MP4 où même les rétro-geeks émergent triomphants !
+        Grâce à nos pipelines inspirés de MakeMKV, FFmpeg et libdvdcss, transformez vos DVD et Blu-Ray en MP4 sans une once de compromis.
+      </p>
+    </section>
+    <section id="fonctionnalites">
+      <h2>Fonctionnalités</h2>
+      <ul class="features">
+        <li>Rippez vos ISO et disques physiques en perfection MP4</li>
+        <li>Extraction et organisation automatique de chapitres, pistes audio et sous-titres</li>
+        <li>Renommage élégant avec numéros de titre (parce que chaque film mérite son rang royal)</li>
+        <li>Fusion finale en un seul fichier pour binge-watching ininterrompu</li>
+        <li>Génération de fichiers texte listant timecodes et titres de chapitres</li>
+      </ul>
+    </section>
+    <section id="download">
+      <h2>Télécharger</h2>
+      <a class="btn-download" href="Metadigilab/Metadigilab.7z" download>
+        📥 Télécharger MetaDigiLab (archive 7z)
+      </a>
+      <p style="margin-top:0.5rem; font-size:0.9rem;">Archive nommée <code>Metadigilab.7z</code> (dans le dossier <code>Metadigilab</code>, testée sous Windows 11 et PC nostalgiques).</p>
+    </section>
+    <section id="wallet">
+      <h2>Adresse Bitcoin</h2>
+      <p class="wallet">3QhqyPVaDFvMQjiWcFWoeRNotQ5Rvn6uWY</p>
+      <div class="donation-qr">
+        <div>
+          <p>Scannez ce QR code pour un don :</p>
+          <img src="qrcode.png" alt="QR Code Bitcoin 3QhqyPVaDFvMQjiWcFWoeRNotQ5Rvn6uWY">
+        </div>
+        <div>
+          <p>Scannez ce QR code PayPal :</p>
+          <img src="qrcodeP.png" alt="QR Code PayPal" />
+        </div>
+      </div>
+      <p>Le logiciel est <strong>gratuit</strong> : il fait quelques “freezes” pour recharger ses piles, mais un petit sou au chapeau serait providentiel pour financer la V2 avec bras bioniques… et ainsi cliquer à votre place (parce que là, on n’en peut plus !)</p>
+      <div id="paypal-container-2D4JRZ3KAN7LY" class="donation-paypal"></div>
+      <script>
+        paypal.HostedButtons({
+          hostedButtonId: "2D4JRZ3KAN7LY",
+        }).render("#paypal-container-2D4JRZ3KAN7LY");
+      </script>
+    </section>
+    <section id="a-propos">
+      <h2>À propos</h2>
+      <p>
+        <strong>Version :</strong> 1.18.1 &nbsp;|&nbsp;
+        <strong>Auteur :</strong> Lufexe &nbsp;|&nbsp;
+        <strong>Date :</strong> 3 mai 2025
+      </p>
+      <p>
+        MetaDigiLab vous embarque dans une odyssée audiovisuelle où chaque ISO maudit renaît en MP4 flamboyant.
+        Trois actes épiques, de l’extraction ISO → MKV au grand final MP4 fusionné « Grand Méliès style ».
+      </p>
+      <p>
+        ⚠️ <em>Ne sacrifiez surtout pas de chèvre</em> : nos pipelines sont sacrés, mais pas suffisamment pour les offrandes animales.
+      </p>
+      <p>
+        Contact & support : <a href="mailto:metadigilab@gmail.com" style="color: var(--accent-color);">metadigilab@gmail.com</a>
+      </p>
+    </section>
+  </main>
+  <footer>
+    © 2025 MetaDigiLab – Tous droits réservés • Donnez-nous un bitcoin ou deux si le cœur vous en dit 😉
+  </footer>
+</body>
+</html>
